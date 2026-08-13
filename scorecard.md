@@ -1,6 +1,6 @@
 # Scorecard
 
-_Generated 2026-08-13 13:07 UTC. 17 predictions logged; 17 resolved._
+_Generated 2026-08-13 18:59 UTC. 30 predictions logged; 17 resolved._
 
 - **Resolved markets:** 17
 - **Base rate (YES):** 0.471
