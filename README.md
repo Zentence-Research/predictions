@@ -41,4 +41,4 @@ These are probabilities and a calibration record — data, not advice. We publis
 anyone does with them is their own decision. Zentence never places trades.
 
 ---
-_Last generated 2026-08-13 18:59 UTC._
+_Last generated 2026-08-14 13:02 UTC._
