@@ -9,11 +9,27 @@ we are right.
 
 ## How to read it
 
-| File | What it is | When it's written |
-|------|------------|-------------------|
-| `predictions.csv` | Each forecast: our probability vs. the market price | **Before** the call |
-| `resolved.csv`    | Those forecasts, once resolved, with outcome + Brier | **After** the call |
-| `scorecard.md`    | Aggregate calibration: Brier, skill, calibration error | Each update |
+| File | What it is | When |
+|------|------------|------|
+| `predictions.csv` / `.json` | Our probability vs. the market price | **Before** the call |
+| `resolved.csv` / `.json` | Resolved forecasts, with outcome + Brier | **After** the call |
+| `scorecard.md` / `.json` | Aggregate calibration: Brier, skill, error | Each update |
+
+The `.json` twins are for programmatic use — the site reads them directly, no backend.
+
+## Load it in a browser (no server)
+
+The files are plain static JSON on GitHub, so a frontend can `fetch` them straight off a CDN:
+
+```js
+const res = await fetch(
+  "https://cdn.jsdelivr.net/gh/Zentence-Research/predictions@main/resolved.json"
+);
+const rows = await res.json();   // array of resolved forecasts
+```
+
+jsDelivr is a free, CORS-enabled CDN over GitHub. It caches for up to ~12h; on a fresh push,
+purge with `https://purge.jsdelivr.net/gh/Zentence-Research/predictions@main/resolved.json`.
 
 **The commit history is the proof.** Each `predictions.csv` update is committed before the call it
 forecasts, so the timestamps show the forecast predated the outcome. No hindsight, no
@@ -41,4 +57,4 @@ These are probabilities and a calibration record — data, not advice. We publis
 anyone does with them is their own decision. Zentence never places trades.
 
 ---
-_Last generated 2026-08-14 13:02 UTC._
+_Last generated 2026-08-15 23:24 UTC._

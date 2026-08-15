@@ -1,0 +1,14 @@
+{
+  "generated": "2026-08-15 23:24 UTC",
+  "predictions": 57,
+  "resolved": 30,
+  "base_rate": 0.6,
+  "model_brier": 0.21726056884023343,
+  "market_brier": 0.12526500000000002,
+  "model_skill_vs_base": 0.09474762983236096,
+  "ece": 0.21153707346532477,
+  "actionable": 28,
+  "hit_rate": 0.39285714285714285,
+  "total_pnl": -0.30000000000000004,
+  "avg_pnl_per_trade": -0.010714285714285716
+}
